@@ -1,0 +1,2 @@
+- [font credit](https://www.dafont.com/diamond-sparkling.font)
+- [hero image](https://unsplash.com/photos/quarter-moon-over-clouds-CUd2VkkpI7U)

@@ -1,0 +1,61 @@
+html {
+	font-size: 18px;
+}
+
+body {
+	background-image: url("media/city.jpg");
+	background-color: #a689a1;
+	background-size: cover;
+	background-position: bottom;
+	background-attachment: fixed;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main {
+	background-color: #3c3452;
+	color: #ff8131;
+	width: 50%;
+	min-width: 400px;
+	padding: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+	border-radius: 30px;
+	border: 4px solid #de4c46;
+}
+
+h1 {
+	font-size: 2.25rem;
+	margin: 10px 5px;
+	color: #de4c46;
+}
+
+h2 {
+	font-size: 1.75rem;
+	margin: 10px 5px;
+	color: #de4c46;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin: 10px 5px 5px;
+}
+
+p {
+	font-size: 1rem;
+	margin: 5px;
+}
+
+ul {
+	margin: 5px;
+}
+
+li {
+	list-style: inside;
+}
+
+a {
+	color: #de4c46;
+}
