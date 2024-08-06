@@ -41,15 +41,41 @@ body {
 }
 
 /* || General Typography */
-/*h1 {
-  font-size: 2rem;
+h1, h2, h3 {
   font-family: "diamond", Georgia, "Times New Roman", Times, serif;
+  margin: .5rlh;
+}
+
+h1 {
+  font-size: 2em;
 }
 
 h2 {
   font-size: 1.5em;
-  font-family: "diamond", Georgia, "Times New Roman", Times, serif;
-}*/
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+p {
+  margin: .5rlh;
+}
+
+a {
+  color: #254B68;
+  font-weight: bold;
+}
+
+a:hover,
+a:active {
+  color: #D37723;
+}
+
+/* || Layout */
+main {
+  margin: 8px;
+}
 
 /* || Header */
 header {
