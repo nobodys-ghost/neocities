@@ -98,6 +98,10 @@ header a {
   text-decoration: none;
 }
 
+header a:hover {
+  color: #254B68;
+}
+
 /* || Main Navigation */
 nav {
   background-color: #2974ae;
@@ -109,11 +113,20 @@ nav li {
   padding: 0.5lh 1em;
 }
 
-/*
 nav li a {
+  font-family: "diamond", Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
   text-decoration: none;
   color: #fff;
-}*/
+}
+
+nav li a:hover {
+  color: #254B68;
+}
+
+nav li a.current-page {
+  text-decoration: underline dotted;
+}
 
 /* || Footer */
 footer {
