@@ -162,6 +162,11 @@ footer {
   text-decoration: underline dotted;
 }
 
+.in-page-nav summary {
+  padding: .5lh;
+  font-size: 1.25em;
+}
+
 /* || Larger Screens */
 @media (min-width: 992px) {
   html {
