@@ -22,7 +22,6 @@ html {
   box-sizing: border-box; /* use border box sizing */
   font-size: 16px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  
 }
 
 /* inherit border box sizing */
@@ -41,9 +40,12 @@ body {
 }
 
 /* || General Typography */
-h1, h2, h3 {
-  font-family: "diamond", Georgia, "Times New Roman", Times, serif;
-  margin: .5rlh;
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0.5rem;
+  margin-top: 1lh;
 }
 
 h1 {
@@ -59,17 +61,17 @@ h3 {
 }
 
 p {
-  margin: .5rlh;
+  margin: 0.5rem;
 }
 
 a {
-  color: #254B68;
+  color: #254b68;
   font-weight: bold;
 }
 
 a:hover,
 a:active {
-  color: #D37723;
+  color: #d37723;
 }
 
 /* || Layout */
@@ -99,7 +101,7 @@ header a {
 }
 
 header a:hover {
-  color: #254B68;
+  color: #254b68;
 }
 
 /* || Main Navigation */
@@ -114,14 +116,14 @@ nav li {
 }
 
 nav li a {
-  font-family: "diamond", Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
   text-decoration: none;
   color: #fff;
 }
 
 nav li a:hover {
-  color: #254B68;
+  color: #254b68;
 }
 
 nav li a.current-page {
@@ -134,6 +136,10 @@ footer {
   padding: 1em;
   border-top: 2px solid #2974ae;
   margin-top: 2em;
+}
+
+footer ul {
+  margin: 0.5rlh;
 }
 
 /* || Components */
