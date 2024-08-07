@@ -61,7 +61,7 @@ h3 {
 }
 
 p {
-  margin: 0.5rem;
+  margin: 0.5rlh;
 }
 
 a {
@@ -143,8 +143,33 @@ footer ul {
 }
 
 /* || Components */
+
+/* in page navigation */
 .in-page-nav {
-  display: none;
+  background-color: #d0deeb;
+  font-style: normal;
+  color: #254b68;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.in-page-nav nav {
+  background-color: inherit;
+  text-align: start;
+}
+
+.in-page-nav nav li {
+  display: block;
+}
+
+.in-page-nav nav li a {
+  color: inherit;
+  font-style: inherit;
+  text-decoration: underline dotted;
+}
+
+.in-page-nav summary {
+  padding: .5lh;
+  font-size: 1.25em;
 }
 
 /* || Larger Screens */
