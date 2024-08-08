@@ -44,20 +44,20 @@ h1,
 h2,
 h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
-  margin: 0.5rem;
+  margin: 0.5rlh;
   margin-top: 1lh;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 p {
@@ -73,6 +73,27 @@ a:hover,
 a:active {
   color: #d37723;
 }
+
+thead {
+  background-color: #2974ae;
+  color: #fff;
+  padding: .25lh;
+}
+
+th, td {
+  padding: .25lh;
+}
+
+/* || list styles */
+
+ul, ol {
+  margin: 0.5rlh;
+}
+
+li {
+  margin: .25rlh 0;
+}
+
 
 /* || Layout */
 main {
@@ -113,6 +134,7 @@ nav {
 nav li {
   display: inline-block;
   padding: 0.5lh 1em;
+  margin: 0;
 }
 
 nav li a {

@@ -1,0 +1,110 @@
+/* || Typography */
+dl {
+  margin: 0.5rlh;
+}
+
+dt,
+dd {
+  display: inline;
+  margin: 0.25rlh 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd::after {
+  content: "";
+  display: block;
+}
+
+/* || General Table Styles */
+table {
+  font-size: 2.5rem;
+  table-layout: fixed;
+}
+
+/* || skill and domain tables */
+.table-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0.5rlh;
+}
+
+#skills,
+#domains {
+  flex: 1;
+  margin: 0.5rlh;
+}
+
+#skills h2,
+#domains h2 {
+  margin-left: 0;
+  font-size: 2.5rem;
+}
+
+#skills table,
+#domains table {
+  width: 100%;
+
+  tbody tr:nth-child(even) {
+    background-color: #d0deeb;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Remove padding from mastery checkboxes */
+  tr td:nth-child(2) {
+    padding: 0;
+  }
+}
+
+.mastery {
+  width: 1lh;
+}
+
+#resistances table {
+  width: 100%;
+
+  td:nth-of-type(3n + 1) {
+    text-align: center;
+  }
+}
+
+#resistances input[type="checkbox"] {
+  appearance: none;
+  height: 1.25lh;
+  width: 1.25lh;
+  border: 2px solid #254b68;
+  border-radius: 20%;
+  margin: 0 .25em;
+}
+
+#resistances input[type="checkbox"]::before {
+  content: url(../media/check-lg.svg);
+  visibility: hidden;
+}
+
+#resistances input[type="checkbox"]:checked::before {
+  visibility: visible;
+} 
+
+#resistances input[type="checkbox"]:disabled {
+  background-color: #d0deeb;
+}
+
+#resistances input[type="checkbox"]:disabled::before {
+  content: url(../media/dash.svg);
+  visibility: visible;
+}
+
+#resistances input[type="number"] {
+  width: 100%;
+  font: inherit;
+  font-size: .5em;
+  border: 1px solid #254b68;
+}

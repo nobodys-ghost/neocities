@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style/css-reset.css" />
     <link rel="stylesheet" href="style/faeryn-style.css" />
+    <link rel="stylesheet" href="style/character-sheet.css" />
     <title>Faeryn | Spire</title>
   </head>
   <body>
@@ -41,118 +42,131 @@
         </details>
       </aside>
       <article>
-        <h1 id="spire-character-sheet">Spire character sheet</h1>
+        <h1 id="character-sheet">Character sheet</h1>
         <dl>
           <dt>Class</dt>
           <dd>Vermissian Sage</dd>
           <dt>Durance</dt>
           <dd>Pet</dd>
         </dl>
-        <section>
-          <h2 id="refresh">Refresh</h2>
-          <p>Uncovering hidden information</p>
-          <p>Eliminate an enemy of the ministry</p>
+        <section id="refresh">
+          <h2>Refresh</h2>
+          <ul>
+            <li>Uncover hidden information</li>
+            <li>Eliminate an enemy of the ministry</li>
+          </ul>
         </section>
-        <section>
-          <h2 id="skills">Skills</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Skill</th>
-                <th>Mastery</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Compel</td>
-                <td><img src="media/check.svg" alt="mastery" /></td>
-              </tr>
-              <tr>
-                <td>Deceive</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Fight</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Fix</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Investigate</td>
-                <td><img src="media/check.svg" alt="mastery" /></td>
-              </tr>
-              <tr>
-                <td>Pursue</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Resist</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Sneak</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Steal</td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section>
-          <h2 id="domains">Domains</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Domain</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Academia</td>
-                <td><img src="media/check.svg" alt="mastery" /></td>
-              </tr>
-              <tr>
-                <td>Crime</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Commerce</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>High society</td>
-                <td><img src="media/check.svg" alt="mastery" /></td>
-              </tr>
-              <tr>
-                <td>Low Society</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Occult</td>
-                <td><img src="media/check.svg" alt="mastery" /></td>
-              </tr>
-              <tr>
-                <td>Order</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Religion</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Technology</td>
-                <td><img src="media/check.svg" alt="mastery" /></td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section>
-          <h2 id="abilities">Abilities</h2>
+        <div class="table-container">
+          <section id="skills">
+            <h2>Skills</h2>
+            <table>
+              <colgroup>
+                <col />
+                <col class="mastery" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>Skill</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Compel</td>
+                  <td><img src="media/check.svg" alt="mastery" /></td>
+                </tr>
+                <tr>
+                  <td>Deceive</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Fight</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Fix</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Investigate</td>
+                  <td><img src="media/check.svg" alt="mastery" /></td>
+                </tr>
+                <tr>
+                  <td>Pursue</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Resist</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Sneak</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Steal</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section id="domains">
+            <h2>Domains</h2>
+            <table>
+              <colgroup>
+                <col />
+                <col class="mastery" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>Domain</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Academia</td>
+                  <td><img src="media/check.svg" alt="mastery" /></td>
+                </tr>
+                <tr>
+                  <td>Crime</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Commerce</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>High society</td>
+                  <td><img src="media/check.svg" alt="mastery" /></td>
+                </tr>
+                <tr>
+                  <td>Low Society</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Occult</td>
+                  <td><img src="media/check.svg" alt="mastery" /></td>
+                </tr>
+                <tr>
+                  <td>Order</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Religion</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Technology</td>
+                  <td><img src="media/check.svg" alt="mastery" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+
+        <section id="abilities">
+          <h2>Abilities</h2>
           <h3 id="back-door">Back door</h3>
           <p>
             You throw open a door and lunge through it into a twisted metallic
@@ -189,11 +203,15 @@
             mind in different ways.
           </p>
         </section>
-        <section>
-          <h2 id="knacks">Knacks</h2>
+        <section id="knacks">
+          <h2>Knacks</h2>
+          <ul>
+            <li>Historical Aelfir Fashion</li>
+            <li><s>Lockpicking</s></li>
+          </ul>
         </section>
-        <section>
-          <h2 id="resistances">Resistances</h2>
+        <section id="resistances">
+          <h2>Resistances</h2>
           <table>
             <thead>
               <tr>
@@ -204,7 +222,7 @@
             </thead>
             <tbody>
               <tr>
-                <th>Blood</th>
+                <th scope="row">Blood</th>
                 <td>
                   <input type="checkbox" disabled />
                   <input type="checkbox" disabled />
@@ -215,7 +233,7 @@
                 <td><input type="number" min="0" /></td>
               </tr>
               <tr>
-                <th>Mind</th>
+                <th scope="row">Mind</th>
                 <td>
                   <input type="checkbox" disabled />
                   <input type="checkbox" disabled />
@@ -226,7 +244,7 @@
                 <td><input type="number" min="0" /></td>
               </tr>
               <tr>
-                <th>Silver</th>
+                <th scope="row">Silver</th>
                 <td>
                   <input type="checkbox" disabled />
                   <input type="checkbox" disabled />
@@ -237,7 +255,7 @@
                 <td><input type="number" min="0" /></td>
               </tr>
               <tr>
-                <th>Shadow</th>
+                <th scope="row">Shadow</th>
                 <td>
                   <input type="checkbox" disabled />
                   <input type="checkbox" disabled />
@@ -248,7 +266,7 @@
                 <td><input type="number" min="0" /></td>
               </tr>
               <tr>
-                <th>Reputation</th>
+                <th scope="row">Reputation</th>
                 <td>
                   <input type="checkbox" disabled />
                   <input type="checkbox" disabled />
@@ -259,21 +277,21 @@
                 <td><input type="number" min="0" /></td>
               </tr>
               <tr>
-                <th>Armor</th>
+                <th scope="row">Armor</th>
                 <td></td>
                 <td><input type="number" min="0" /></td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
-                <th colspan="2">Total Stress</th>
+                <th colspan="2" scope="row">Total Stress</th>
                 <td><input type="number" min="0" /></td>
               </tr>
             </tfoot>
           </table>
         </section>
-        <section>
-          <h2 id="bonds">Bonds</h2>
+        <section id="bonds">
+          <h2>Bonds</h2>
           <h3 id="kovach">Kovach (he/him)</h3>
           <p>
             I know that he lies about his durance, and that he actually chose to
