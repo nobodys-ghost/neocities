@@ -20,7 +20,7 @@
 /* || General Styles */
 html {
   box-sizing: border-box; /* use border box sizing */
-  font-size: 16px;
+  font-size: 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -75,7 +75,7 @@ a:active {
 }
 
 /* || Layout */
-main {
+article {
   margin: 8px;
 }
 
@@ -112,7 +112,7 @@ nav {
 
 nav li {
   display: inline-block;
-  padding: 0.5lh 1em;
+  padding: 1lh;
 }
 
 nav li a {
@@ -120,6 +120,7 @@ nav li a {
   font-style: italic;
   text-decoration: none;
   color: #fff;
+  font-size: 2em;
 }
 
 nav li a:hover {
