@@ -20,7 +20,7 @@
 /* || General Styles */
 html {
   box-sizing: border-box; /* use border box sizing */
-  font-size: 16px;
+  font-size: 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -96,7 +96,7 @@ li {
 
 
 /* || Layout */
-main {
+article {
   margin: 8px;
 }
 
@@ -142,6 +142,7 @@ nav li a {
   font-style: italic;
   text-decoration: none;
   color: #fff;
+  font-size: 2em;
 }
 
 nav li a:hover {
@@ -155,7 +156,7 @@ nav li a.current-page {
 /* || Footer */
 footer {
   width: 100%;
-  padding: 1em;
+  padding: 1lh;
   border-top: 2px solid #2974ae;
   margin-top: 2em;
 }
@@ -197,6 +198,7 @@ footer ul {
 /* || Larger Screens */
 @media (min-width: 992px) {
   html {
+    /* background */
     background: rgb(208, 222, 235);
     background: linear-gradient(
       -45deg,
@@ -209,21 +211,81 @@ footer ul {
     );
     background-size: 32px 32px;
     background-repeat: repeat;
+
+    font-size: 16px;
+  }
+
+  body {
+    /* width: 992 - 2 * outline thickness */
+    width: 980px;
+    gap: 32px;
+    margin: 0px auto;
+  }
+
+  body > * {
+    outline: 6px double #fff;
+  }
+
+  main > * {
+    outline: 6px double #fff;
+  }
+
+  /* || Layout */
+  nav li a {
+    font-size: 1rem;
   }
 
   header {
-    height: 30vh;
+    height: 25vh;
+    margin-top: 32px;
+  }
+
+  article {
+    background-color: #fff;
+    padding: 1lh;
+    margin: 0px;
+    flex: 4;
   }
 
   main {
-    width: 992px;
-    align-self: center;
+    outline: unset;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 32px;
+  }
+
+  aside {
+    height: fit-content;
+    position: sticky;
+    /* same as body { gap: ... } */
+    top: 32px;
+    flex: 1;
+  }
+
+  aside > details {
+    float: right;
+    display: block;
+    width: 100%;
+  }
+
+  aside > details[open] > summary {
+    display: none;
   }
 
   /* || Footer */
   footer {
     margin-top: auto;
     background-color: #2974ae;
+    padding: .5lh;
+  }
+
+  footer > h2 {
+    /* Half the regular h2 margin-top */
+    margin-top: .25rem;
+  }
+
+  footer a {
+    color: #fff;
   }
 
   .in-page-nav {
