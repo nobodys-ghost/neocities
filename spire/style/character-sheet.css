@@ -81,7 +81,7 @@ table {
   width: 1.25lh;
   border: 2px solid #254b68;
   border-radius: 20%;
-  margin: 0 .25em;
+  margin: 0 0.25em;
 }
 
 #resistances input[type="checkbox"]::before {
@@ -91,7 +91,7 @@ table {
 
 #resistances input[type="checkbox"]:checked::before {
   visibility: visible;
-} 
+}
 
 #resistances input[type="checkbox"]:disabled {
   background-color: #d0deeb;
@@ -105,6 +105,31 @@ table {
 #resistances input[type="number"] {
   width: 100%;
   font: inherit;
-  font-size: .5em;
+  font-size: 0.5em;
   border: 1px solid #254b68;
+}
+
+@media (min-width: 992px) {
+  table {
+    font-size: 1rem;
+  }
+
+  .table-container {
+    gap: 0.5rlh;
+  }
+
+  #skills,
+  #domains {
+    flex: 1;
+    margin: 0.5rlh 0;
+  }
+
+  #skills h2,
+  #domains h2 {
+    font-size: revert;
+  }
+
+  #resistances input[type="number"] {
+    font-size: inherit;
+  }
 }
