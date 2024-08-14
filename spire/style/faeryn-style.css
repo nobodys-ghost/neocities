@@ -62,6 +62,7 @@ h3 {
 
 p {
   margin: 0.5rlh;
+  line-height: 1.125;
 }
 
 a {
@@ -72,6 +73,14 @@ a {
 a:hover,
 a:active {
   color: #d37723;
+}
+
+em {
+  font-style: italic;
+}
+
+time {
+  font-style: italic;
 }
 
 thead {
@@ -195,12 +204,19 @@ footer ul {
   font-size: 1.25em;
 }
 
+/* || Relationships */
+
 .relationship {
   font-style: italic;
 }
 
 .pronouns {
   font-weight: bold;
+}
+
+/* || Blog components */
+section > a {
+  margin: .5rlh;
 }
 
 /* || Larger Screens */
