@@ -195,6 +195,14 @@ footer ul {
   font-size: 1.25em;
 }
 
+.relationship {
+  font-style: italic;
+}
+
+.pronouns {
+  font-weight: bold;
+}
+
 /* || Larger Screens */
 @media (min-width: 992px) {
   html {
