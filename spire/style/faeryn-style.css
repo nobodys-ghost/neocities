@@ -86,23 +86,24 @@ time {
 thead {
   background-color: #2974ae;
   color: #fff;
-  padding: .25lh;
+  padding: 0.25lh;
 }
 
-th, td {
-  padding: .25lh;
+th,
+td {
+  padding: 0.25lh;
 }
 
 /* || list styles */
 
-ul, ol {
+ul,
+ol {
   margin: 0.5rlh;
 }
 
 li {
-  margin: .25rlh 0;
+  margin: 0.25rlh 0;
 }
-
 
 /* || Layout */
 article {
@@ -200,7 +201,7 @@ footer ul {
 }
 
 .in-page-nav summary {
-  padding: .5lh;
+  padding: 0.5lh;
   font-size: 1.25em;
 }
 
@@ -216,7 +217,16 @@ footer ul {
 
 /* || Blog components */
 section > a {
-  margin: .5rlh;
+  margin: 0.5rlh;
+}
+
+.blog-links {
+  margin: 0.5rlh;
+}
+
+.blog-links > a {
+  float: inline-end;
+  margin: 0 .25rlh;
 }
 
 /* || Larger Screens */
@@ -300,12 +310,12 @@ section > a {
   footer {
     margin-top: auto;
     background-color: #2974ae;
-    padding: .5lh;
+    padding: 0.5lh;
   }
 
   footer > h2 {
     /* Half the regular h2 margin-top */
-    margin-top: .25rem;
+    margin-top: 0.25rem;
   }
 
   footer a {
