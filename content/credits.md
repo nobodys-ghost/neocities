@@ -1,0 +1,2 @@
+- [Hero Image](https://unsplash.com/photos/blue-and-green-abstract-painting-pfX-GsJMtDY)
+- [Favicon](https://www.freepik.com/icon/planet_10221049#fromView=resource_detail&position=13)

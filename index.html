@@ -3,39 +3,89 @@
   <head>
     <meta charset="utf-8" />
     <title>Void's Home</title>
+    <link rel="icon" href="media/favicon.png" />
     <link rel="stylesheet" href="css-reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width,intial-scale=1" />
   </head>
   <body>
-    <main>
-      <h1>Welcome</h1>
-      <p>
-        Welcome to my parking spot for my web development practice and
-        experiments. For now, it's pretty empty, but that will change someday.
-        Maybe.
-      </p>
-      <h2>About me</h2>
-      <p>
-        Call me Void. I'm a half elf who's currently studying to be a web
-        developer. I don't have a gender in the conventional sense, so I use
-        they/them pronouns.
-      </p>
-      <p>
-        I hate writing about myself, so have a list of things I like instead.
-      </p>
-      <h3>Things I Like</h3>
+    <nav>
       <ul>
-        <li>The Web</li>
-        <li>Libraries</li>
-        <li>Plants</li>
-        <li>Table top role playing games</li>
-        <li>Board Games</li>
-        <li>Nice stationary</li>
+        <li><a href="index.html">The Void</a></li>
+        <li><a href="projects.html">My Projects</a></li>
+        <li><a href="links.html">Links</a></li>
       </ul>
-      <h2>Stuff to see here</h2>
-      <ul>
-        <a href="spire/index.html">My Spire character page</a>
-      </ul>
-    </main>
+    </nav>
+    <div class="page-container">
+      <header class="banner-img index">
+        <img
+          srcset="media/paint-640w.jpg 640w, media/paint-1920w.jpg 1920w"
+          sizes="(max-width: 640px) 100vw, 1920px"
+          src="media/paint-640w.jpg"
+          alt=""
+        />
+      </header>
+      <main>
+        <header>
+          <h1>Welcome to the Void</h1>
+          <p>Hiya! Welcome to my little corner of the internet.</p>
+        </header>
+        <p>
+          I'm studying to be a web developer, and this is my hub for all of my
+          little projects. There might be some of my writing here someday, if I
+          ever manage to write something I think is worth sharing.
+        </p>
+        <p>
+          Feel free to take a look around. It's pretty empty now, but there will
+          be more stuff here someday. Maybe.
+        </p>
+      </main>
+      <aside id="updates-preview">
+        <!--This section should contain the three most recent updates-->
+        <h2>Updates</h2>
+        <a href="changelog.html">See all updates</a>
+        <dt><time datetime="2024-09-11">September 11, 2024</time></dt>
+        <dd>Redid main site</dd>
+        <dt><time datetime="2024-09-06">September 6, 2024</time></dt>
+        <dd>
+          Quality of life refactor for
+          <a href="spire/index.html">Faeryn's page</a>
+        </dd>
+        <dd>
+          <a href="spire/blog/session4.html">Spire session 4 blog post</a>
+        </dd>
+        <dl>
+          <dt><time datetime="2024-08-28">August 28, 2024</time></dt>
+          <dd>
+            <a href="spire/blog/session3.html">Spire session 3 blog post</a>
+          </dd>
+        </dl>
+      </aside>
+    </div>
+    <footer>
+      <div>
+        <p>Site by Nobody's Ghost</p>
+        <a href="https://neocities.org/site/nobodys-ghost">Neocities</a><br />
+        <a href="changelog.html">Changelog</a>
+      </div>
+      <section>
+        <h2>Credits</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.freepik.com/icon/planet_10221049#fromView=resource_detail&position=13"
+              >Favicon</a
+            >
+          </li>
+          <li><a href="https://brailleinstitute.org/freefont/">Font</a></li>
+          <li>
+            <a
+              href="https://unsplash.com/photos/blue-and-green-abstract-painting-pfX-GsJMtDY"
+              >Header Image</a
+            >
+          </li>
+        </ul>
+      </section>
+    </footer>
   </body>
 </html>
