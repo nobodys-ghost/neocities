@@ -20,7 +20,7 @@
 /* || General Styles */
 html {
   box-sizing: border-box; /* use border box sizing */
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -44,8 +44,7 @@ h1,
 h2,
 h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
-  margin: 0.5rlh;
-  margin-top: 1lh;
+  margin: 1lh 0lh 0.5lh;
 }
 
 h1 {
@@ -61,7 +60,7 @@ h3 {
 }
 
 p {
-  margin: 0.5rlh;
+  margin: 0.5lh 0lh;
   line-height: 1.125;
 }
 
@@ -95,63 +94,21 @@ td {
 }
 
 /* || list styles */
-
 ul,
 ol {
-  margin: 0.5rlh;
+  margin: 0.5lh 0lh;
 }
 
 li {
-  margin: 0.25rlh 0;
+  margin: 0.25lh 0;
 }
 
 /* || Layout */
-article {
-  margin: 8px;
-}
-
-/* || Main Navigation */
 nav {
-  background-color: #2974ae;
-  text-align: center;
-}
-
-nav li {
-  display: inline-block;
-  padding: 0.5lh 1em;
-  margin: 0;
-}
-
-nav li a {
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-style: italic;
-  text-decoration: none;
-  color: #fff;
-  font-size: 2em;
-}
-
-nav li a:hover {
-  color: #254b68;
-}
-
-nav li a.current-page {
-  text-decoration: underline dotted;
-}
-
-/* || Footer */
-footer {
-  width: 100%;
-  padding: 1lh;
-  border-top: 2px solid #2974ae;
-  margin-top: 2em;
-}
-
-footer ul {
-  margin: 0.5rlh;
 }
 
 /* || Components */
-
 /* Page Header */
 body > header {
   width: 100%;
@@ -177,26 +134,66 @@ body > header a:hover {
   color: #254b68;
 }
 
+/* Site Navigation */
+/* no other nav elements should be descended directly from <body> */
+body > nav {
+  background-color: #2974ae;
+  text-align: center;
+}
+
+body > nav li {
+  display: inline-block;
+  padding: 0.5lh 1em;
+  margin: 0;
+  font-style: italic;
+  color: #fff;
+}
+
+body > nav li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body > nav li a:focus,
+body > nav li a:hover {
+  color: #254b68;
+}
+
+body > nav li a.current-page {
+  text-decoration: underline dotted;
+}
+
+/* site footer */
+body > footer {
+  width: 100%;
+  padding: 1lh;
+  border-top: 2px solid #2974ae;
+  margin-top: 2em;
+}
+
+/* article */
+main > article {
+  margin: 8px;
+}
+
 /* in page navigation */
 .in-page-nav {
   background-color: #d0deeb;
-  font-style: normal;
   color: #254b68;
   font-family: Georgia, "Times New Roman", Times, serif;
+  display: flow-root;
 }
 
 .in-page-nav nav {
   background-color: inherit;
-  text-align: start;
 }
 
-.in-page-nav nav li {
-  display: block;
+.in-page-nav li {
+  margin: 1rlh 0.5rlh;
 }
 
 .in-page-nav nav li a {
   color: inherit;
-  font-style: inherit;
   text-decoration: underline dotted;
 }
 
@@ -206,7 +203,6 @@ body > header a:hover {
 }
 
 /* || Relationships */
-
 .relationship {
   font-style: italic;
 }
@@ -216,24 +212,37 @@ body > header a:hover {
 }
 
 /* || Blog components */
-section > a {
-  margin: 0.5rlh;
+.blog header {
+  padding-bottom: .5em;
+  border-bottom: 1px solid #254b68;
 }
 
-.blog-header time {
-  margin: 0 0.5rlh;
+article .blog header {
+  border-bottom: none;
 }
 
-.blog-links a {
-  margin: .25rlh .5rlh;
+.blog header a {
+  text-decoration: underline dotted;
+}
+
+.blog header time {
+  font-style: italic;
+}
+
+.blog footer a {
+  margin: 0.25rlh 0.5rlh;
   display: inline-block;
 }
 
+.blog footer a:first-child {
+  margin-inline-start: 0px;
+}
+
 /* || Larger Screens */
-@media (min-width: 992px) {
+@media (min-width: 45rem) {
   html {
     /* background */
-    background: rgb(208, 222, 235);
+    background: rgba(167, 198, 227, 1);
     background: linear-gradient(
       -45deg,
       rgba(208, 222, 235, 1) 5%,
@@ -245,14 +254,11 @@ section > a {
     );
     background-size: 32px 32px;
     background-repeat: repeat;
-
-    font-size: 16px;
   }
 
   body {
-    /* width: 992 - 2 * outline thickness */
-    width: 980px;
-    gap: 32px;
+    width: 45rem;
+    gap: 2em;
     margin: 0px auto;
   }
 
@@ -265,64 +271,65 @@ section > a {
   }
 
   /* || Layout */
-  nav li a {
-    font-size: 1rem;
-  }
-
   body > header {
     height: 25vh;
     margin-top: 32px;
   }
 
-  article {
-    background-color: #fff;
-    padding: 1lh;
-    margin: 0px;
-    flex: 4;
-  }
-
   main {
     outline: unset;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     gap: 32px;
   }
 
-  aside {
-    height: fit-content;
-    position: sticky;
-    /* same as body { gap: ... } */
-    top: 32px;
-    flex: 1;
-  }
-
-  aside > details {
-    float: right;
-    display: block;
-    width: 100%;
-  }
-
-  aside > details[open] > summary {
-    display: none;
+  main > article {
+    margin: unset;
+    background-color: #fff;
+    padding: 1lh;
+    flex: 4;
   }
 
   /* || Footer */
-  footer {
+  body > footer {
     margin-top: auto;
     background-color: #2974ae;
     padding: 0.5lh;
   }
 
-  footer > h2 {
+  body > footer h2 {
     /* Half the regular h2 margin-top */
     margin-top: 0.25rem;
   }
 
-  footer a {
+  body > footer a {
     color: #fff;
+  }
+}
+
+@media (min-width: 55rem) {
+  body {
+    width: 55rem;
+  }
+  
+  main {
+    flex-direction: row-reverse;
   }
 
   .in-page-nav {
-    display: unset;
+    height: fit-content;
+    position: sticky;
+    float: right;
+    /* same as body { gap: ... } */
+    top: 32px;
+    flex: 1;
+  }
+
+  .in-page-nav > details {
+    width: 100%;
+  }
+
+  .in-page-nav > details[open] > summary {
+    display: none;
   }
 }
