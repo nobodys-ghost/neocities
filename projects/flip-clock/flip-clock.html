@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US" class="white">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,intial-scale=1" />
+    <title>Flip Clock</title>
+    <link rel="stylesheet" href="../../css-reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="flip-clock.js" defer></script>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="card">
+        <span id="hours">12</span>
+      </div>
+      <div class="card">
+        <span id="minutes">00</span>
+        <span id="am-pm">am</span>
+      </div>
+    </div>
+    <section class="settings">
+      <h2>Clock Settings</h2>
+      <form id="settings-form">
+        <label for="hours-display">Display 12 hour time?</label>
+        <input type="checkbox" id="hours-display" name="hours-display" checked/>
+        <br />
+        <label for="theme">Theme</label>
+        <select id="theme" name="theme">
+          <option>White</option>
+          <option>Black</option>
+          <option>Red</option>
+          <option>Orange</option>
+          <option>Yellow</option>
+          <option>Green</option>
+          <option>Blue</option>
+          <option>Purple</option>
+          <option>Pink</option>
+        </select>
+        <button id="submit-settings" type="submit">Update</button>
+      </form>
+      <a href="../../projects.html">Back to main site</a>
+    </section>
+  </body>
+</html>

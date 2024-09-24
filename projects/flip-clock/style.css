@@ -1,0 +1,154 @@
+html {
+  background-color: var(--background-color);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: var(--text-color);
+  padding: 0;
+}
+
+.clock {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.card {
+  background-color: var(--main-color);
+  flex: 1 1 auto;
+  margin: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4vw;
+}
+
+.card span {
+  color: var(--text-color);
+  font-size: 27vh;
+  display: inline-block;
+  min-width: 1.5em;
+  text-align: center;
+}
+
+.card::before {
+  background-color: var(--background-color);
+  content: "";
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  height: 1vw;
+}
+
+#am-pm {
+  font-size: 8vh;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+
+.settings {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: .5em 3vw; 
+  border-top: 2px solid var(--main-color);
+  padding-top: 1em;
+}
+
+h2 {
+  font-size: 1.25em;
+  margin-bottom: .25em;
+}
+
+@media (orientation: landscape) {
+  .clock {
+    flex-flow: row nowrap;
+  }
+
+  .card {
+    margin: 3vh;
+    border-radius: 4vh;
+  }
+
+  .card span {
+    font-size: min(27vw, 90vh);
+  }
+
+  #am-pm {
+    font-size: 8vw;
+  }
+
+  .card::before {
+    height: 1vh;
+  }
+
+  .settings {
+    margin: .5em 3vh; 
+  }
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--text-color);
+}
+
+a:focus, a:hover, a:active {
+  color: var(--main-color);
+}
+
+/* Theme colors */
+.white {
+  --background-color: #b3aaa1;
+  --main-color: #c9c3be;
+  --text-color: white;
+}
+
+.black {
+  --background-color: #181b21;
+  --main-color: #313439;
+  --text-color: #919191;
+}
+
+.red {
+  --background-color: #e72413;
+  --main-color: #e75230;
+  --text-color: #ffa495;
+}
+
+.orange {
+  --background-color: #ec6f2a;
+  --main-color: #f6895f;
+  --text-color: #f8c5ac;
+}
+
+.yellow {
+  --background-color: #f7a800;
+  --main-color: #ffb46b;
+  --text-color: #fae5cd;
+}
+
+.green {
+  --background-color: #4da492;
+  --main-color: #4de5aa;
+  --text-color: #befff5;
+}
+
+.blue {
+  --background-color: #669bec;
+  --main-color: #80c5ff;
+  --text-color: #d0efff;
+}
+
+.purple {
+  --background-color: #a03bf3;
+  --main-color: #ad88f8;
+  --text-color: #e3ceff;
+}
+
+.pink {
+  --background-color: #fd9082;
+  --main-color: #f8a8a8;
+  --text-color: #ffdede;
+}
