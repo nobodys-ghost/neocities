@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <title>Void's Home</title>
     <link rel="icon" href="media/favicon.png" />
-    <link rel="stylesheet" href="css-reset.css" />
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="css-reset.css" />
+    <link rel="stylesheet" href="style.css" /> -->
     <meta name="viewport" content="width=device-width,intial-scale=1" />
   </head>
   <body>
@@ -16,20 +16,21 @@
         <li><a href="links.html">Links</a></li>
       </ul>
     </nav>
-    <div class="page-container">
-      <header class="banner-img index">
-        <img
-          srcset="media/paint-640w.jpg 640w, media/paint-1920w.jpg 1920w"
-          sizes="(max-width: 640px) 100vw, 1920px"
-          src="media/paint-640w.jpg"
-          alt=""
-        />
-      </header>
-      <main>
+    <main>
+      <div>
         <header>
           <h1>Welcome to the Void</h1>
           <p>Hiya! Welcome to my little corner of the internet.</p>
         </header>
+        <figure>
+          <img src="media/pfp-sm.png" alt="Ghost's avatar" />
+          <figcaption>
+            Made with
+            <a href="https://picrew.me/en/image_maker/1904634"
+              ><span lang="ja">キラキラ鱈メーカー3</span> on Picrew</a
+            >
+          </figcaption>
+        </figure>
         <p>
           I'm studying to be a web developer, and this is my hub for all of my
           little projects. There might be some of my writing here someday, if I
@@ -39,14 +40,22 @@
           Feel free to take a look around. It's pretty empty now, but there will
           be more stuff here someday. Maybe.
         </p>
-      </main>
+        <section>
+          <h2>Buttons</h2>
+          <img src="media/banners/internetprivacy.gif" alt="internet privacy now">
+          <img src="media/banners/privacy-is-a-hr.gif" alt="privacy is a human right">
+          <img src="media/banners/ublock-now.png" alt="ublock origin now"> 
+        </section>
+      </div>
       <aside id="updates-preview">
         <!--This section should contain the three most recent updates-->
         <h2>Updates</h2>
         <a href="changelog.html">See all updates</a>
         <dl>
           <dt><time datetime="2024-09-25">September 25, 2024</time></dt>
-          <dd><a href="spire/blog/session5.html">Spire session 5 blog post</a></dd>
+          <dd>
+            <a href="spire/blog/session5.html">Spire session 5 blog post</a>
+          </dd>
           <dt><time datetime="2024-09-24">September 24, 2024</time></dt>
           <dd>
             Added
@@ -58,13 +67,13 @@
           <dd>Redid main site</dd>
         </dl>
       </aside>
-    </div>
+    </main>
     <footer>
-      <div>
-        <p>Site by Nobody's Ghost</p>
+      <section>
+        <h2>Site by Nobody's Ghost</h2>
         <a href="https://neocities.org/site/nobodys-ghost">Neocities</a><br />
         <a href="changelog.html">Changelog</a>
-      </div>
+      </section>
       <section>
         <h2>Credits</h2>
         <ul>
@@ -75,12 +84,6 @@
             >
           </li>
           <li><a href="https://brailleinstitute.org/freefont/">Font</a></li>
-          <li>
-            <a
-              href="https://unsplash.com/photos/blue-and-green-abstract-painting-pfX-GsJMtDY"
-              >Header Image</a
-            >
-          </li>
         </ul>
       </section>
     </footer>
