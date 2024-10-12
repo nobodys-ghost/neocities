@@ -1,0 +1,83 @@
+h1 {
+  color: var(--primary-color);
+
+  @supports (background-clip: text) {
+    background: linear-gradient(
+      45deg,
+      var(--secondary-color) 0%,
+      var(--primary-color) 100%
+    );
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "head head" "pic pic" "text text" "btns btns" "change change";
+  column-gap: 2em;
+  flex: 1 0 auto;
+}
+
+header {
+  grid-area: head;
+  text-align: center;
+}
+
+@media (min-width: 40rem) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "pic head head head" "text text text text" "btns btns btns btns" "change change change change";
+  }
+
+  figure {
+    margin-top: 1em;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-bottom: 0.125em solid var(--border-color);
+    text-align: left;
+  }
+}
+
+@media (min-width: 50rem) {
+  main {
+    grid-template-areas: "pic head head head" "pic text text text" "pic btns btns btns" "change change change change";
+  }
+}
+
+@media (min-width: 75rem) {
+  main {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "pic head head head change" "pic text text text change" "pic btns btns btns change";
+  }
+
+  figure {
+    margin-block: auto;
+  }
+}
+
+figure {
+  grid-area: pic;
+  width: min-content;
+  margin-inline: auto;
+  img {
+    border-radius: 10%;
+  }
+}
+
+main > div {
+  grid-area: text;
+}
+
+#buttons {
+  grid-area: btns;
+}
+
+#updates {
+  grid-area: change;
+}

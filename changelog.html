@@ -1,126 +1,27 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <title>Changes to the Void</title>
-    <link rel="icon" href="media/favicon.png" />
-    <link rel="stylesheet" href="css-reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width,intial-scale=1" />
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="index.html">The Void</a></li>
-        <li><a href="projects.html">My Projects</a></li>
-        <li><a href="links.html">Links</a></li>
-      </ul>
-    </nav>
-    <div class="page-container">
-      <header class="banner-img">
-        <img
-          srcset="media/paint-640w.jpg 640w, media/paint-1920w.jpg 1920w"
-          sizes="(max-width: 640px) 100vw, 1920px"
-          src="media/paint-640w.jpg"
-          alt=""
-        />
-      </header>
-      <main>
-        <header>
-          <h1>Updates</h1>
-        </header>
-        <section>
-          <h2><time datetime="2024-09-25">September 25, 2024</time></h2>
-          <ul>
-            <li><a href="spire/blog/session5.html">Spire session 5 blog post</a></li>
-          </ul>
-          <h2><time datetime="2024-09-24">September 24, 2024</time></h2>
-          <ul>
-            <li>
-              Added
-              <a href="projects/flip-clock/flip-clock.html">flip clock</a> to
-              projects page
-            </li>
-            <li>Fixed a syntax issue in the changelog preview on site index</li>
-          </ul>
-          <h2><time datetime="2024-09-11">September 11, 2024</time></h2>
-          <ul>
-            <li>Redid main site</li>
-          </ul>
-          <h2><time datetime="2024-09-06">September 6, 2024</time></h2>
-          <ul>
-            <li>
-              Quality of life refactor for
-              <a href="spire/index.html">Faeryn's page</a>
-            </li>
-            <li>
-              <a href="spire/blog/session4.html">Spire session 4 blog post</a>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2><time datetime="2024-08-28">August 28, 2024</time></h2>
-          <ul>
-            <li>
-              <a href="spire/blog/session3.html">Spire session 3 blog post</a>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2><time datetime="2024-08-27">August 27, 2024</time></h2>
-          <ul>
-            <li>
-              Big refactor of <a href="spire/index.html">Faeryn's page</a>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2><time datetime="2024-08-21">August 21, 2024</time></h2>
-          <ul>
-            <li>
-              <a href="spire/blog/session2.html">Spire session 2 blog post</a>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2><time datetime="2024-08-13">August 13, 2024</time></h2>
-          <ul>
-            <li>Added <a href="spire/index.html">Spire hub</a></li>
-          </ul>
-        </section>
-        <section>
-          <h2><time datetime="2024-07-06">July 6, 2024</time></h2>
-          <p>I don't actually remember the exact date but around this time</p>
-          <ul>
-            <li>Initial site revamp</li>
-          </ul>
-        </section>
-      </main>
-    </div>
-    <footer>
-      <div>
-        <p>Site by Nobody's Ghost</p>
-        <a href="https://neocities.org/site/nobodys-ghost">Neocities</a><br />
-        <a href="changelog.html">Changelog</a>
-      </div>
-      <section>
-        <h2>Credits</h2>
-        <ul>
-          <li>
-            <a
-              href="https://www.freepik.com/icon/planet_10221049#fromView=resource_detail&position=13"
-              >Favicon</a
-            >
-          </li>
-          <li><a href="https://brailleinstitute.org/freefont/">Font</a></li>
-          <li>
-            <a
-              href="https://unsplash.com/photos/blue-and-green-abstract-painting-pfX-GsJMtDY"
-              >Header Image</a
-            >
-          </li>
-        </ul>
-      </section>
-    </footer>
-  </body>
-</html>
+---
+layout: article
+title: Changelog | Into to the void
+stylesheets: /assets/styles/changelog.css
+start: /_includes/changelog-toc.html
+---
+
+<header>
+  <h1>Updates</h1>
+</header>
+{% for change in site.data.changelog %}
+<section>
+  <h2>
+    <time datetime="{{change.date}}" id="{{change.date}}"
+      >{{ change.date | date_to_long_string: "ordinal", "US" }}</time
+    >
+  </h2>
+  {% if change.note %}
+  <p>{{ change.note }}</p>
+  {% endif %}
+  <ul>
+    {% for item in change.changes %}
+    <li>{{item | markdownify}}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}

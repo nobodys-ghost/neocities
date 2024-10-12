@@ -1,4 +1,7 @@
 _site
+.jekyll-cache
+test
 content/banners/
 content/output.html
 spire/content/blogs/
+.vscode

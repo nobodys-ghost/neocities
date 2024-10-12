@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,intial-scale=1" />
+    <title>{{ page.title }}</title>
+    <link rel="icon" href="assets/icons/favicon.png" />
+    <link rel="stylesheet" href="/assets/styles/css-reset.css" />
+    <link rel="stylesheet" href="/assets/styles/global-text.css" />
+    <link rel="stylesheet" href="/assets/styles/global-layout.css" />
+    {% for stylesheet in page.stylesheets %}
+    <link rel="stylesheet" href="{{stylesheet}}" />
+    {% endfor %}
+    <meta name="viewport" content="width=device-width,intial-scale=1" />
+  </head>
+  <body>
+    <div id="skip-links">
+      <ul>
+        <li><a href="#main">Skip to main content</a></li>
+        {% if page.layout == "article" and page.start %}
+        <li><a href="#article">Skip to article content</a></li>
+        {% endif %}
+        <li>
+          <a href="/accessibility-statement.html">Accessibility Statement</a>
+        </li>
+      </ul>
+    </div>
+    {% include nav.html %}
+    <main id="main">{{ content }}</main>
+    {% include footer.html %}
+  </body>
+</html>
