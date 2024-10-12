@@ -1,2 +1,4 @@
-content/
-spire/content/
+_site
+content/banners/
+content/output.html
+spire/content/blogs/
