@@ -1,0 +1,59 @@
+[
+	{
+		"date": "2024-09-25",
+		"changes": [
+			"[Spire session 5 blog post](spire/blog/session5.html)"
+		]
+	},
+	{
+		"date": "2024-09-24",
+		"changes": [
+			"Added [flip clock](projects/flip-clock/flip-clock.html) to projects page",
+			"Fixed a syntax issue in the changelog preview on site index"
+		]
+	},
+	{
+		"date": "2024-09-11",
+		"changes": [
+			"Redid main site"
+		]
+	},
+	{
+		"date": "2024-09-06",
+		"changes": [
+			"Quality of life refactor for [Faeryn's page](spire/index.html)",
+			"[Spire session 4 blog post](spire/blog/session4.html)"
+		]
+	},
+	{
+		"date": "2024-08-28",
+		"changes": [
+			"[Spire session 3 blog post](spire/blog/session3.html)"
+		]
+	},
+	{
+		"date": "2024-08-27",
+		"changes": [
+			"Big refactor of [Faeryn's page](spire/index.html)"
+		]
+	},
+	{
+		"date": "2024-08-21",
+		"changes": [
+			"[Spire session 2 blog post](spire/blog/session2.html)"
+		]
+	},
+	{
+		"date": "2024-08-13",
+		"changes": [
+			"Added [Spire hub](spire/index.html)"
+		]
+	},
+  {
+    "date": "2024-07-06",
+		"note": "I don't actually remember the exact date but around this time",
+		"changes": [
+			"Initial site revamp"
+		]
+  }
+]

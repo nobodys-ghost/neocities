@@ -1,0 +1,26 @@
+<footer>
+  <section>
+    <h2>Site by Void</h2>
+    <address>
+      <a href="https://github.com/nobodys-ghost"><img src="/assets/icons/github.svg" alt="github"></a>
+    </address>
+  </section>
+  <section>
+    <h2>Site Links</h2>
+    <ul>
+      <li><a href="https://neocities.org/site/nobodys-ghost">Neocities</a></li>
+      <li><a href="/changelog.html">Changelog</a></li>
+      <li><a href="/accessibility-statement">Accessibility Statement</a></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Credits</h2>
+    <ul>
+      {% for resource in site.data.site-credits %}
+      <li>
+        <a href="{{resource.link}}">{{resource.display}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</footer>

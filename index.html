@@ -1,91 +1,66 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <title>Void's Home</title>
-    <link rel="icon" href="media/favicon.png" />
-    <!-- <link rel="stylesheet" href="css-reset.css" />
-    <link rel="stylesheet" href="style.css" /> -->
-    <meta name="viewport" content="width=device-width,intial-scale=1" />
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="index.html">The Void</a></li>
-        <li><a href="projects.html">My Projects</a></li>
-        <li><a href="links.html">Links</a></li>
-      </ul>
-    </nav>
-    <main>
-      <div>
-        <header>
-          <h1>Welcome to the Void</h1>
-          <p>Hiya! Welcome to my little corner of the internet.</p>
-        </header>
-        <figure>
-          <img src="media/pfp-sm.png" alt="Ghost's avatar" />
-          <figcaption>
-            Made with
-            <a href="https://picrew.me/en/image_maker/1904634"
-              ><span lang="ja">キラキラ鱈メーカー3</span> on Picrew</a
-            >
-          </figcaption>
-        </figure>
-        <p>
-          I'm studying to be a web developer, and this is my hub for all of my
-          little projects. There might be some of my writing here someday, if I
-          ever manage to write something I think is worth sharing.
-        </p>
-        <p>
-          Feel free to take a look around. It's pretty empty now, but there will
-          be more stuff here someday. Maybe.
-        </p>
-        <section>
-          <h2>Buttons</h2>
-          <img src="media/banners/internetprivacy.gif" alt="internet privacy now">
-          <img src="media/banners/privacy-is-a-hr.gif" alt="privacy is a human right">
-          <img src="media/banners/ublock-now.png" alt="ublock origin now"> 
-        </section>
-      </div>
-      <aside id="updates-preview">
-        <!--This section should contain the three most recent updates-->
-        <h2>Updates</h2>
-        <a href="changelog.html">See all updates</a>
-        <dl>
-          <dt><time datetime="2024-09-25">September 25, 2024</time></dt>
-          <dd>
-            <a href="spire/blog/session5.html">Spire session 5 blog post</a>
-          </dd>
-          <dt><time datetime="2024-09-24">September 24, 2024</time></dt>
-          <dd>
-            Added
-            <a href="projects/flip-clock/flip-clock.html">flip clock</a> to
-            projects page
-          </dd>
-          <dd>Fixed a syntax issue in the changelog preview on site index</dd>
-          <dt><time datetime="2024-09-11">September 11, 2024</time></dt>
-          <dd>Redid main site</dd>
-        </dl>
-      </aside>
-    </main>
-    <footer>
-      <section>
-        <h2>Site by Nobody's Ghost</h2>
-        <a href="https://neocities.org/site/nobodys-ghost">Neocities</a><br />
-        <a href="changelog.html">Changelog</a>
-      </section>
-      <section>
-        <h2>Credits</h2>
-        <ul>
-          <li>
-            <a
-              href="https://www.freepik.com/icon/planet_10221049#fromView=resource_detail&position=13"
-              >Favicon</a
-            >
-          </li>
-          <li><a href="https://brailleinstitute.org/freefont/">Font</a></li>
-        </ul>
-      </section>
-    </footer>
-  </body>
-</html>
+---
+layout: default
+title: Welcome to The Void
+stylesheets: /assets/styles/index.css
+---
+
+<header>
+  <h1>Welcome to the Void</h1>
+  <p>Hiya! Welcome to my little corner of the internet.</p>
+</header>
+<figure>
+  <img
+    src="assets/images/profile-pic.png"
+    alt="Void's profile picture. A drawing of a half elf with short black hair. The agender and gay man pride flags are in the background."
+    width="300"
+    height="300"
+  />
+  <figcaption id="pfp-caption">
+    Made with
+    <a href="https://picrew.me/en/image_maker/644129"
+      >makowka character maker 2</a
+    >
+    on Picrew
+  </figcaption>
+</figure>
+<div>
+  <p>
+    I'm studying to be a web developer, and this is my hub for all of my little
+    projects. There might be some of my writing here someday, if I ever manage
+    to write something I think is worth sharing.
+  </p>
+  <p>
+    Feel free to take a look around. It's pretty empty now, but there will be
+    more stuff here someday. Maybe.
+  </p>
+</div>
+<section id="buttons">
+  <h2>Buttons</h2>
+  <img
+    src="assets/images/banners/internetprivacy.gif"
+    alt="internet privacy now"
+  />
+  <img
+    src="assets/images/banners/privacy-is-a-hr.gif"
+    alt="privacy is a human right"
+  />
+  <img src="assets/images/banners/ublock-now.png" alt="ublock origin now" />
+</section>
+<aside id="updates">
+  <h2>Updates</h2>
+  <a href="changelog.html">See all updates</a>
+  <dl>
+    {% assign preview_items = site.data.changelog | slice: 0, 4 %} {% for change
+    in preview_items %}
+    <dt>
+      <time datetime="{{change.date}}"
+        >{{ change.date | date_to_long_string: "ordinal", "US" }}</time
+      >
+    </dt>
+    {% if change.note %}
+    <dd>{{ change.note }}</dd>
+    {% endif %} {% for item in change.changes %}
+    <dd>{{ item | markdownify }}</dd>
+    {% endfor %} {% endfor %}
+  </dl>
+</aside>

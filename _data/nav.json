@@ -1,0 +1,14 @@
+[
+	{
+		"text": "The Void",
+		"destination": "/"
+	},
+	{
+		"text": "My Projects",
+		"destination": "/projects.html"
+	},
+	{
+		"text": "Links",
+		"destination": "/links.html"
+	}
+]
