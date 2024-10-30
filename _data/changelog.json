@@ -1,5 +1,11 @@
 [
 	{
+		"date": "2024-10-30",
+		"changes": [
+			"Redesigned and implemented main site"
+		]
+	},
+	{
 		"date": "2024-09-25",
 		"changes": [
 			"[Spire session 5 blog post](spire/blog/session5.html)"
